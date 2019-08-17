@@ -51,7 +51,7 @@ if (keyboard_check_pressed(ord("A")))
 				var dis = point_distance(0,0,xx - w/2 + lx, yy - h/2 + ly);
 				
 				bul.direction = d;
-				bul.speed = dis/10.0 + 0.1 * r; // * random_range(1, 10);
+				bul.speed = speed + dis/10.0 + 0.1 * r; // * random_range(1, 10);
 			}
 		}
 	}
