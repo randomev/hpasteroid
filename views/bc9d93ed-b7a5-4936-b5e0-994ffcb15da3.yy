@@ -1,0 +1,17 @@
+{
+    "id": "bc9d93ed-b7a5-4936-b5e0-994ffcb15da3",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "bc9d93ed-b7a5-4936-b5e0-994ffcb15da3",
+    "children": [
+        "0622d1ec-3951-46f7-abba-6ca8a3b19426",
+        "54c5a51e-1ec7-49cd-a42d-cc2e39cee0c6",
+        "822e3b4c-bcd5-48a2-b48d-2fdbc3225c36",
+        "b9d376e8-7aa2-41ae-8370-15be198696ef",
+        "bfc32409-970a-482e-ad64-763b60f0c456"
+    ],
+    "filterType": "GMObject",
+    "folderName": "objects",
+    "isDefaultView": false,
+    "localisedFolderName": "ResourceTree_Objects"
+}
