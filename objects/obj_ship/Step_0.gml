@@ -28,7 +28,7 @@ if (keyboard_check(vk_space) && global.smallammo>0)
 
 	var bul = instance_create_layer(x,y,"Instances",obj_bullet);
 	bul.direction = direction;
-	bul.speed = 2;
+	bul.speed = speed + 2;
 }
 
 if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
@@ -77,9 +77,11 @@ if (keyboard_check_pressed(ord("Z")))
 	{
 		if (p[i] == 1)
 		{
+			global.smallammo -= 1;
+
 			var bul = instance_create_layer(x,y,"Instances",obj_bullet);
 			bul.direction = i;
-			bul.speed = 2;
+			bul.speed = speed + 2;
 		}
 		i++;
 	}
