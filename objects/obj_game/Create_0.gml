@@ -2,6 +2,13 @@
 // You can write your code in this editor
 randomize();
 
+draw_set_font(font0);
+
+health = 100;
+score = 0;
+global.bigammo = 100;
+global.smallammo = 100;
+
 repeat(40)
 {
 	var xx = choose(
@@ -20,4 +27,5 @@ repeat(40)
 	new_ast.speed = random_range(0,1);
 }
 
+instance_create_layer(random_range(10,room_width-10),random_range(10,room_height-10),"Instances",obj_bigammosupply);
 draw_text(100,100,string(instance_count));

@@ -22,16 +22,18 @@ if (keyboard_check(vk_right))
 	direction -= 3;	
 }
 
-if (keyboard_check(vk_space))
+if (keyboard_check(vk_space) && global.smallammo>0)
 {
+	global.smallammo -= 1;
+
 	var bul = instance_create_layer(x,y,"Instances",obj_bullet);
 	bul.direction = direction;
 	bul.speed = 2;
 }
 
-if (keyboard_check_pressed(ord("A")))
+if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
 {
-	
+	global.bigammo -= 10;
 	for (xx = 0;xx < w;xx++)
 	{
 		for (yy = 0;yy < h;yy++)
@@ -44,9 +46,9 @@ if (keyboard_check_pressed(ord("A")))
 				
 				bul.image_blend = pp[xx+(yy*w)];
 				
-				var lx = lengthdir_x(40,direction);
-				var ly = lengthdir_y(40,direction);
-				var r = random_range(1,10);
+				var lx = lengthdir_x(40+speed,direction);
+				var ly = lengthdir_y(40+speed,direction);
+				var r = random_range(0,4);
 				var d = point_direction(0,0,xx - w/2 + lx , yy - h/2 + ly);
 				var dis = point_distance(0,0,xx - w/2 + lx, yy - h/2 + ly);
 				
