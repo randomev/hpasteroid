@@ -41,11 +41,17 @@ if (keyboard_check_pressed(ord("A")))
 			{
 				//var p = sprite_get_pixel_color(spr_mine1, xx,yy);
 				var bul = instance_create_layer(x + xx - w/2, y + yy - h/2,"Instances",obj_pixel);
+				
 				bul.image_blend = pp[xx+(yy*w)];
-				var d = point_direction(0,0,xx - w/2 * random_range(1, 10),yy - h/2);
-				var dis = point_distance(0,0,xx - w/2,yy - h/2);
+				
+				var lx = lengthdir_x(40,direction);
+				var ly = lengthdir_y(40,direction);
+				var r = random_range(1,10);
+				var d = point_direction(0,0,xx - w/2 + lx , yy - h/2 + ly);
+				var dis = point_distance(0,0,xx - w/2 + lx, yy - h/2 + ly);
+				
 				bul.direction = d;
-				bul.speed = dis/10.0 + 0.1 * random_range(1, 10);
+				bul.speed = dis/10.0 + 0.1 * r; // * random_range(1, 10);
 			}
 		}
 	}
