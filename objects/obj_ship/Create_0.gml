@@ -10,6 +10,14 @@ for (xx = 0;xx < w;xx++)
 	for (yy = 0;yy < h;yy++)
 	{
 		var a = sprite_get_pixel_color(spr_mine1, xx,yy);
-		pp[xx+(yy*w)] = a;
+		var i = color_get_value(a);
+		// only if there is actual color
+		if i > 0
+		{
+			pp[xx+(yy*w)] = a;
+		} else {
+			// no color, no pixel ...
+			pp[xx+(yy*w)] = -1;			
+		}
 	}
 }
