@@ -6,4 +6,5 @@ instance_destroy(other);
 if (alienhealth<0)
 {
 	instance_destroy();
+	global.enemy_count -= 1;
 }

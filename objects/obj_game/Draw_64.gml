@@ -3,23 +3,34 @@
 // You can write your code in this editor
 
 var xs = 0;
-var ys = 40;
+var yy = 0;
+var ystep = 30;
 
-draw_text(xs,0,"Score");
-draw_text(xs,20,score);
+draw_text(xs,0,"Level");
+draw_text(xs+200,0,global.level);
+yy += ystep;
+draw_text(xs,yy,"Score");
+draw_text(xs+200,yy,score);
+yy += ystep;
 
-draw_text(xs,40,"Health");
+draw_text(xs,yy,"Asteroids left");
+draw_text(xs+200,yy,global.asteroid_count);
+
+yy += ystep;
+
+draw_text(xs,yy,"Health");
 xs = 200;
-draw_healthbar(xs,ys,xs+100,ys+20,health,c_black,c_red,c_green,0,1,1);
+draw_healthbar(xs,yy,xs+100,yy+20,health,c_black,c_red,c_green,0,1,1);
 
-ys = 80;
+yy += ystep;
 xs = 0;
-draw_text(xs,ys,"Particle gun");
+draw_text(xs,yy,"Particle gun");
 xs = 200;
-draw_healthbar(xs,ys,xs+100,ys+20,global.smallammo,c_black,c_red,c_blue,1,0,1);
+draw_healthbar(xs,yy,xs+100,yy+20,global.smallammo,c_black,c_red,c_blue,1,0,1);
+yy += ystep;
 
-ys = 120;
 xs = 0;
-draw_text(xs,ys,"Love left");
+draw_text(xs,yy,"Blasts");
 xs = 200;
-draw_healthbar(xs,ys,xs+100,ys+20,global.bigammo,c_black,c_red,c_purple,1,0,1);
+draw_healthbar(xs,yy,xs+100,yy+20,global.bigammo,c_black,c_black,c_yellow,1,0,1);
+

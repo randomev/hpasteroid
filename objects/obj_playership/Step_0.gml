@@ -7,6 +7,12 @@ if (health < 70)
 	sprite_index = spr_ship_noshields; // no shields
 }
 
+if (health >= 70)
+{
+	global.playerhasshields = true;
+	sprite_index = spr_ship; // with shields
+}
+
 if (keyboard_check(vk_up) && speed<5)
 {
 	speed += 1;
@@ -41,7 +47,7 @@ if (keyboard_check_pressed(vk_space) && global.smallammo>0)
 	bul.speed = speed + 10;
 }
 
-if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
+if ((keyboard_check_pressed(ord("A")) || keyboard_check_pressed(ord("Z"))) && global.bigammo>0)
 {
 	global.bigammo -= 10;
 	var i = 1;
@@ -64,7 +70,7 @@ if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
 				var dis = point_distance(0,0,xx - blast_w[i]/2 + lx, yy - blast_h[i]/2 + ly);
 				
 				bul.direction = d;
-				bul.speed = speed + dis/10.0 + 0.1 * r; // * random_range(1, 10);
+				bul.speed = speed + dis/10.0 + 0.1; // * random_range(1, 10);
 			}
 		}
 	}

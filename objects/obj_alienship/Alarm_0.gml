@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if (room == room_gameover)
+{
+	return;
+}
+
 alarm_set(0,random_range(0.2,2.0)*room_speed);
 var b = instance_create_layer(x,y,"Instances",obj_alienbullet);
 
