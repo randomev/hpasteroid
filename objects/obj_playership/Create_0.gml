@@ -5,6 +5,7 @@ friction = 0.01
 // this initializes all the different blast types and pre-reads the pixel data
 // for later usage (such as in obj_ship.step when firing)
 
+global.playerhasshields = true;
 
 // all the blast types - new blast type is just a new sprite
 blasts[0] = spr_blast1;

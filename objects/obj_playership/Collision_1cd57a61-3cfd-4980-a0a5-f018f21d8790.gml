@@ -3,4 +3,3 @@
 instance_destroy(other);
 effect_create_above(ef_explosion, x, y, 2, c_blue);
 health -= 70;
-sprite_index = spr_ship_noshields; // no shields

@@ -5,16 +5,6 @@
     "name": "obj_asteroid",
     "eventList": [
         {
-            "id": "5a9181b5-0ad9-4f3e-8323-701af2ad590b",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "bfc32409-970a-482e-ad64-763b60f0c456",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "54c5a51e-1ec7-49cd-a42d-cc2e39cee0c6"
-        },
-        {
             "id": "188dec87-f218-4f2f-a9f4-5ecb00206dca",
             "modelName": "GMEvent",
             "mvc": "1.0",

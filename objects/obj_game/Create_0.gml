@@ -28,4 +28,5 @@ repeat(40)
 }
 
 instance_create_layer(random_range(10,room_width-10),random_range(10,room_height-10),"Instances",obj_bigammosupply);
-draw_text(100,100,string(instance_count));
+
+instance_create_layer(random_range(100,room_width-10),random_range(100,room_height-10),"Instances",obj_alienship);

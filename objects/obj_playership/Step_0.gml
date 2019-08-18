@@ -1,35 +1,44 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (health < 70)
+{
+	global.playerhasshields = false;
+	sprite_index = spr_ship_noshields; // no shields
+}
 
-if (keyboard_check_pressed(vk_up) && speed<5)
+if (keyboard_check(vk_up) && speed<5)
 {
 	speed += 1;
-	effect_create_above(ef_star,x,y,0.1,c_yellow);
+	effect_create_above(ef_star,x,y,0.4,c_yellow);
 }
 
 if (keyboard_check_pressed(vk_down) && speed > -5)
 {
-	speed -= 0.1;
+	speed -= 0.5;
+	var xx = lengthdir_x(15,direction);
+	var yy = lengthdir_y(15,direction);
+	effect_create_above(ef_spark,x + xx,y + yy,0.3,c_white);
+	effect_create_above(ef_spark,x + xx,y + yy,0.2,c_blue);
 }
 
 if (keyboard_check(vk_left))
 {
-	direction += 1.5;
+	direction += 5;
 }
 
 if (keyboard_check(vk_right))
 {
-	direction -= 1.5;	
+	direction -= 5;	
 }
 
 if (keyboard_check_pressed(vk_space) && global.smallammo>0)
 {
-	global.smallammo -= 1;
+	global.smallammo -= 3;
 
 	var bul = instance_create_layer(x,y,"Instances",obj_bullet);
 	bul.direction = direction;
-	bul.speed = speed + 2;
+	bul.speed = speed + 10;
 }
 
 if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
@@ -44,7 +53,7 @@ if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
 			if (blast_pixeldata[i, xx+(yy*blast_w[i])] > -1)
 			{
 				//var p = sprite_get_pixel_color(spr_mine1, xx,yy);
-				var bul = instance_create_layer(x + xx - blast_w[i]/2, y + yy - blast_h[i]/2,"Instances",obj_pixel);
+				var bul = instance_create_layer(x + xx - blast_w[i]/2, y + yy - blast_h[i]/2,"Instances",obj_bigammo);
 				
 				bul.image_blend = blast_pixeldata[i, xx+(yy*blast_w[i])];
 				
@@ -61,6 +70,7 @@ if (keyboard_check_pressed(ord("A")) && global.bigammo>0)
 	}
 }
 
+/*
 if (keyboard_check_pressed(ord("Z")))
 {
 
@@ -73,7 +83,7 @@ if (keyboard_check_pressed(ord("Z")))
 			if (blast_pixeldata[i, xx+(yy*blast_w[i])] > -1)
 			{
 				//var p = sprite_get_pixel_color(spr_mine1, xx,yy);
-				var bul = instance_create_layer(x + xx - blast_w[i]/2, y + yy - blast_h[i]/2,"Instances",obj_pixel);
+				var bul = instance_create_layer(x + xx - blast_w[i]/2, y + yy - blast_h[i]/2,"Instances",obj_bigammo);
 				
 				bul.image_blend = blast_pixeldata[i, xx+(yy*blast_w[i])];
 				// only blast outward, not forward! 
@@ -91,6 +101,7 @@ if (keyboard_check_pressed(ord("Z")))
 	}
 
 }
+*/
 
 image_angle = direction;
 
