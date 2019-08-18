@@ -28,7 +28,7 @@ if (keyboard_check_pressed(vk_escape))
 	game_end();
 }
 
-if (!instance_exists(obj_asteroid))
+if (!instance_exists(obj_asteroid) && room == room_level1)
 {
 	global.level += 1;
 	script_levelup();

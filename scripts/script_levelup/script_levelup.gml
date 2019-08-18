@@ -1,3 +1,9 @@
+
+if (room == room_gameover)
+{
+	return;
+}
+
 randomize();
 
 health = 100;
@@ -5,6 +11,9 @@ global.bigammo = 100;
 global.smallammo = 100;
 global.enemy_count = 0;
 global.asteroid_count = 0;
+
+obj_playership.x = room_width/2;
+obj_playership.y = room_height/2;
 
 // small asteroids
 repeat(global.level * random_range(5,10))
