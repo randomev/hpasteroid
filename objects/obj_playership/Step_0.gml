@@ -1,16 +1,52 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (health < 70)
+if (room == room_start)
+{
+	return;
+}
+
+if (health < 50)
 {
 	global.playerhasshields = false;
 	sprite_index = spr_ship_noshields; // no shields
 }
 
-if (health >= 70)
+if (health >= 50)
 {
 	global.playerhasshields = true;
-	sprite_index = spr_ship; // with shields
+	//if (sprite_index != spr_ship)
+	//{
+	//	sprite_index = spr_ship; // with shields
+	//}
+	// 0 = full shield
+	// 5 = almost no shields
+	
+	
+	if (health >= 50 && health < 60)
+	{
+		sprite_index = spr_ship50;
+	}
+
+	if (health >= 60 && health < 70)
+	{
+		sprite_index = spr_ship70;
+	}
+
+	if (health >= 70 && health < 80)
+	{
+		sprite_index = spr_ship80;
+	}
+
+	if (health >= 80 && health < 90)
+	{
+		sprite_index = spr_ship90;
+	}
+	if (health >= 90)
+	{
+		sprite_index = spr_ship100;
+	}
+
 }
 
 if (keyboard_check(vk_up) && speed<5)

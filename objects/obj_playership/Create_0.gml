@@ -7,6 +7,11 @@ friction = 0.01
 
 global.playerhasshields = true;
 
+// no shield animation
+//image_speed = 0;
+
+sprite_index = spr_ship;
+
 // all the blast types - new blast type is just a new sprite
 blasts[0] = spr_blast1;
 blasts[1] = spr_blast2;
