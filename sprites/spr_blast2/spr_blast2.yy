@@ -2,7 +2,7 @@
     "id": "0920e534-a69a-405d-b0d3-3f0b0e43c92a",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_mine1",
+    "name": "spr_blast2",
     "For3D": false,
     "HTile": false,
     "VTile": false,

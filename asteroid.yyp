@@ -42,7 +42,7 @@
             "Key": "0622d1ec-3951-46f7-abba-6ca8a3b19426",
             "Value": {
                 "id": "1e58a5ac-bc0f-444e-b80a-b7a27054b3e3",
-                "resourcePath": "objects\\obj_ship\\obj_ship.yy",
+                "resourcePath": "objects\\obj_playership\\obj_playership.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -50,7 +50,7 @@
             "Key": "0920e534-a69a-405d-b0d3-3f0b0e43c92a",
             "Value": {
                 "id": "b4cf2183-5931-4d9a-9fff-03c68d1e5f1b",
-                "resourcePath": "sprites\\spr_mine1\\spr_mine1.yy",
+                "resourcePath": "sprites\\spr_blast2\\spr_blast2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "5bc438e4-e219-4a99-8451-a15f56a4df4d",
+            "Value": {
+                "id": "48fabd17-fe94-4ac6-87cf-9934a9855a34",
+                "resourcePath": "sprites\\spr_ship_noshields\\spr_ship_noshields.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5bc95e01-df33-4075-bf69-97e3d1363933",
             "Value": {
                 "id": "2fd086a9-02f0-416e-a7aa-0fe577cf4784",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "a96f711e-7965-4fe7-93bc-3db7ca07e1c3",
+            "Value": {
+                "id": "812af7fe-9750-43c8-8946-a13e3e3bfcfb",
+                "resourcePath": "objects\\obj_alienship\\obj_alienship.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b035b988-3cfc-4f31-bc2f-4a9776208e61",
             "Value": {
                 "id": "7a744bc5-a8db-4852-bd0e-3e6e76eecba1",
@@ -250,7 +266,15 @@
             "Key": "c7a2abde-b9fd-453e-a600-98b9b9c37ca7",
             "Value": {
                 "id": "6f8dbfae-d745-4089-a73d-af9b42b4c7c6",
-                "resourcePath": "sprites\\sprite3\\sprite3.yy",
+                "resourcePath": "sprites\\spr_blast1\\spr_blast1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c8ce9b9b-f3c4-4570-9f69-cff90cf50852",
+            "Value": {
+                "id": "b3f106fb-7b62-4e55-945a-eb7fff056c89",
+                "resourcePath": "sprites\\spr_alienship\\spr_alienship.yy",
                 "resourceType": "GMSprite"
             }
         },
